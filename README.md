@@ -25,6 +25,28 @@ transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd');
 
 // react
 transform('react/index.js', '@babel/plugin-transform-react-jsx');
+
+// [regenerator](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
+transform('regenerator.js', [
+        '@babel/plugin-transform-regenerator',
+        [
+            '@babel/plugin-transform-runtime', 
+            {
+                "absoluteRuntime": false,
+                "corejs": false,
+                "helpers": true,
+                "regenerator": true,
+                "useESModules": false,
+                "version": "7.0.0-beta.0"
+            }
+        ]
+    ], true);
+
+// runtime
+transform('runtime.js', '@babel/plugin-transform-runtime');
+
+// typescript
+transform('typescript.js', '@babel/plugin-transform-typescript');
 ```
 
 ## 运行

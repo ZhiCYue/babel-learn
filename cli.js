@@ -11,15 +11,19 @@ function _core() {
     return data;
 }
 
-const transform = function (file, plugin) {
-    if (fs.existsSync(`lib/${file}`)) return;
+const transform = function (file, plugin, force = false) {
+    if (fs.existsSync(`lib/${file}`) && !force) return;
 
     const code = fs.readFileSync(path.resolve(__dirname, `src/${file}`));
 
+    let plugins = [];
+    if (typeof plugin === 'string') {
+        plugins.push(plugin);
+    } else if (plugin instanceof Array) {
+        plugins = plugin;
+    }
     const res = _core().transform(code, {
-        plugins: [
-            plugin
-        ]
+        plugins
     });
 
     fs.writeFileSync(path.resolve(__dirname, `lib/${file}`), res.code);
@@ -47,7 +51,20 @@ transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd');
 transform('react/index.js', '@babel/plugin-transform-react-jsx');
 
 // regenerator
-transform('regenerator.js', '@babel/plugin-transform-regenerator');
+transform('regenerator.js', [
+        '@babel/plugin-transform-regenerator',
+        [
+            '@babel/plugin-transform-runtime', 
+            {
+                "absoluteRuntime": false,
+                "corejs": false,
+                "helpers": true,
+                "regenerator": true,
+                "useESModules": false,
+                "version": "7.0.0-beta.0"
+            }
+        ]
+    ], true);
 
 // runtime
 transform('runtime.js', '@babel/plugin-transform-runtime');
