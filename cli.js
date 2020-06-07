@@ -1,10 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
+function _core() {
+    const data = require("@babel/core");
+
+    _core = function () {
+        return data;
+    };
+
+    return data;
+}
+
 const transform = function (file, plugin) {
+    if (fs.existsSync(`lib/${file}`)) return;
+
     const code = fs.readFileSync(path.resolve(__dirname, `src/${file}`));
 
-    const res = require("@babel/core").transform(code, {
+    const res = _core().transform(code, {
         plugins: [
             plugin
         ]
@@ -33,3 +45,12 @@ transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd');
 
 // react
 transform('react/index.js', '@babel/plugin-transform-react-jsx');
+
+// regenerator
+transform('regenerator.js', '@babel/plugin-transform-regenerator');
+
+// runtime
+transform('runtime.js', '@babel/plugin-transform-runtime');
+
+// typescript
+transform('typescript.js', '@babel/plugin-transform-typescript');
