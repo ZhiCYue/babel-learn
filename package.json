@@ -24,8 +24,9 @@
     "@babel/plugin-transform-for-of": "^7.8.3",
     "@babel/plugin-transform-instanceof": "^7.10.1",
     "@babel/plugin-transform-member-expression-literals": "^7.10.1",
-    "@babel/plugin-transform-modules-amd": "^7.8.3",
-    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/plugin-transform-modules-amd": "^7.10.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.1",
+    "@babel/plugin-transform-modules-umd": "^7.10.1",
     "@babel/plugin-transform-new-target": "^7.8.3",
     "@babel/plugin-transform-object-assign": "^7.8.3",
     "@babel/plugin-transform-property-literals": "^7.10.1",
@@ -39,6 +40,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-destructuring": "^7.10.1",
+    "@babel/plugin-transform-modules-systemjs": "^7.10.1",
     "@babel/runtime": "^7.8.3",
     "babylon": "^6.18.0",
     "core-js": "^2.6.11"
