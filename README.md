@@ -51,3 +51,25 @@ transform('typescript.js', '@babel/plugin-transform-typescript');
 
 ## 运行
 `node cli.js`
+
+## @babel/register
+
+没有使用 register 时
+```js
+// run.js
+
+// require('@babel/register');
+require('./index');
+```
+执行：`node bar/run.js` 控制台报错。
+
+
+使用 register 时
+```js
+// run.js
+
+require('@babel/register');
+require('./index');
+```
+执行：`node bar/run.js` 控制台输出：3
+
