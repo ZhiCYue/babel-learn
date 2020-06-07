@@ -18,3 +18,6 @@ transform('index.1.js', '@babel/plugin-transform-classes');
 
 // destructuring
 transform('index.2.js', '@babel/plugin-transform-destructuring');
+
+// instanceof
+transform('index.3.js', '@babel/plugin-transform-instanceof');
