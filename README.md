@@ -5,4 +5,5 @@ plugin
 
 ## 运行
 `npm install`
+
 `node cli.js`
