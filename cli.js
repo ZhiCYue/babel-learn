@@ -51,7 +51,10 @@ transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd');
 transform('react/index.js', '@babel/plugin-transform-react-jsx');
 
 // regenerator
-transform('regenerator.js', [
+transform('regenerator.js', '@babel/plugin-transform-regenerator', true);
+
+// runtime
+transform('runtime.js', [
         '@babel/plugin-transform-regenerator',
         [
             '@babel/plugin-transform-runtime', 
@@ -65,9 +68,6 @@ transform('regenerator.js', [
             }
         ]
     ], true);
-
-// runtime
-transform('runtime.js', '@babel/plugin-transform-runtime');
 
 // typescript
 transform('typescript.js', '@babel/plugin-transform-typescript');
