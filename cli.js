@@ -21,3 +21,6 @@ transform('index.2.js', '@babel/plugin-transform-destructuring');
 
 // instanceof
 transform('index.3.js', '@babel/plugin-transform-instanceof');
+
+// async-to-generator
+transform('index.4.js', '@babel/plugin-transform-async-to-generator');
