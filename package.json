@@ -1,0 +1,45 @@
+{
+  "name": "babel-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-async-generator-functions": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "^7.8.3",
+    "@babel/plugin-proposal-function-sent": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-transform-arrow-functions": "^7.10.1",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-classes": "^7.10.1",
+    "@babel/plugin-transform-computed-properties": "^7.8.3",
+    "@babel/plugin-transform-for-of": "^7.8.3",
+    "@babel/plugin-transform-member-expression-literals": "^7.10.1",
+    "@babel/plugin-transform-modules-amd": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/plugin-transform-new-target": "^7.8.3",
+    "@babel/plugin-transform-object-assign": "^7.8.3",
+    "@babel/plugin-transform-property-literals": "^7.10.1",
+    "@babel/plugin-transform-property-mutators": "^7.10.1",
+    "@babel/plugin-transform-regenerator": "^7.8.3",
+    "@babel/plugin-transform-reserved-words": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.10.1",
+    "babel-plugin-transform-inline-consecutive-adds": "^0.4.3"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-destructuring": "^7.10.1",
+    "@babel/runtime": "^7.8.3",
+    "babylon": "^6.18.0",
+    "core-js": "^2.6.11"
+  }
+}
