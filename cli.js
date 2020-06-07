@@ -30,3 +30,6 @@ transform('modules/index.amd.js', '@babel/plugin-transform-modules-amd');
 transform('modules/index.commonjs.js', '@babel/plugin-transform-modules-commonjs');
 transform('modules/index.systemjs.js', '@babel/plugin-transform-modules-systemjs');
 transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd');
+
+// react
+transform('react/index.js', '@babel/plugin-transform-react-jsx');
