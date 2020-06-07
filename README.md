@@ -50,6 +50,4 @@ transform('typescript.js', '@babel/plugin-transform-typescript');
 ```
 
 ## 运行
-`npm install`
-
 `node cli.js`

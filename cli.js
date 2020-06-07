@@ -71,3 +71,6 @@ transform('runtime.js', [
 
 // typescript
 transform('typescript.js', '@babel/plugin-transform-typescript');
+
+// register
+transform('register/register.js', ['@babel/plugin-transform-destructuring'], true);
