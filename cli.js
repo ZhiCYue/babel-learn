@@ -78,6 +78,20 @@ transform('index.11.js', [
     '@babel/plugin-transform-runtime'
 ]);
 
+transform('index.12.js', '@babel/plugin-proposal-optional-chaining');
+
+transform('index.13.js', [
+    [
+        "@babel/plugin-proposal-decorators",
+        {
+            decoratorsBeforeExport: false
+        }
+    ],
+    // "@babel/plugin-proposal-class-properties"
+], true);
+
+transform('index.14.js', '@babel/plugin-proposal-class-properties');
+
 // // modules
 transform('modules/index.amd.js', '@babel/plugin-transform-modules-amd');
 transform('modules/index.commonjs.js', '@babel/plugin-transform-modules-commonjs');
