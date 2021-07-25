@@ -29,45 +29,83 @@ const transform = function (file, plugin, force = false) {
     fs.writeFileSync(path.resolve(__dirname, `lib/${file}`), res.code);
 }
 
+// arrow
+// transform('index.js', '@babel/plugin-transform-arrow-functions', true);
+
+
 // class
-transform('index.1.js', '@babel/plugin-transform-classes');
+// transform('index.1.js', '@babel/plugin-transform-classes');
 
-// destructuring
-transform('index.2.js', '@babel/plugin-transform-destructuring');
+// // destructuring
+// transform('index.2.js', '@babel/plugin-transform-destructuring');
 
-// instanceof
-transform('index.3.js', '@babel/plugin-transform-instanceof');
+// // instanceof
+// transform('index.3.js', '@babel/plugin-transform-instanceof');
 
-// async-to-generator
-transform('index.4.js', '@babel/plugin-transform-async-to-generator');
+// // async-to-generator
+// transform('index.4.js', '@babel/plugin-transform-async-to-generator');
 
-// modules
-transform('modules/index.amd.js', '@babel/plugin-transform-modules-amd');
-transform('modules/index.commonjs.js', '@babel/plugin-transform-modules-commonjs');
-transform('modules/index.systemjs.js', '@babel/plugin-transform-modules-systemjs');
-transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd');
+// transform-runtime
+// transform('index.5.js', [
+//     [
+//         '@babel/plugin-transform-runtime',
+//         {
+//             "absoluteRuntime": false,
+//             "corejs": 3,
+//             "helpers": true,
+//             "regenerator": true,
+//             "useESModules": false
+//         }
+//     ]
+// ], true);
 
-// react
-transform('react/index.js', '@babel/plugin-transform-react-jsx');
+// // transform-object-assign
+// transform('index.6.js', '@babel/plugin-transform-object-assign');
+
+// // modules
+// transform('modules/index.amd.js', '@babel/plugin-transform-modules-amd');
+// transform('modules/index.commonjs.js', '@babel/plugin-transform-modules-commonjs');
+// transform('modules/index.systemjs.js', '@babel/plugin-transform-modules-systemjs');
+// transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd');
+
+// // react
+// transform('react/index.js', '@babel/plugin-transform-react-jsx');
+// transform('react/index.1.js', '@babel/plugin-transform-react-jsx-compat', true);
+// transform('react/index.2.js', [
+//     [
+//         "@babel/plugin-transform-react-jsx",
+//         {
+//             "throwIfNamespace": false, // defaults to true
+//             "runtime": "classic", // defaults to classic
+//             "importSource": "custom-jsx-library" // defaults to react
+//         }
+//     ]
+// ], true);
 
 // regenerator
-transform('regenerator.js', '@babel/plugin-transform-regenerator', true);
+// transform('regenerator.js', [
+//     ['@babel/plugin-transform-regenerator', {
+//         "asyncGenerators": true,
+//         "generators": true,
+//         "async": true
+//     }]
+// ], true);
 
-// runtime
-transform('runtime.js', [
-        '@babel/plugin-transform-regenerator',
-        [
-            '@babel/plugin-transform-runtime', 
-            {
-                "absoluteRuntime": false,
-                "corejs": false,
-                "helpers": true,
-                "regenerator": true,
-                "useESModules": false,
-                "version": "7.0.0-beta.0"
-            }
-        ]
-    ], true);
+// // runtime
+// transform('runtime.js', [
+//     '@babel/plugin-transform-regenerator',
+//     [
+//         '@babel/plugin-transform-runtime',
+//         {
+//             "absoluteRuntime": false,
+//             "corejs": false,
+//             "helpers": true,
+//             "regenerator": true,
+//             "useESModules": false,
+//             // "version": "7.0.0-beta.0"
+//         }
+//     ]
+// ], true);
 
-// typescript
-transform('typescript.js', '@babel/plugin-transform-typescript');
+// // typescript
+// transform('typescript.js', '@babel/plugin-transform-typescript');
