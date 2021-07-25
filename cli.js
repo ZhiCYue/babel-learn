@@ -39,8 +39,8 @@ const transform = function (file, plugin, force = false) {
 // // destructuring
 // transform('index.2.js', '@babel/plugin-transform-destructuring');
 
-// // instanceof
-// transform('index.3.js', '@babel/plugin-transform-instanceof');
+// instanceof
+transform('index.3.js', '@babel/plugin-transform-instanceof');
 
 // // async-to-generator
 // transform('index.4.js', '@babel/plugin-transform-async-to-generator');
@@ -64,6 +64,8 @@ const transform = function (file, plugin, force = false) {
 
 // plugin-transform-object-super
 transform('index.7.js', '@babel/plugin-transform-object-super');
+
+transform('index.8.js', '@babel/plugin-transform-for-of');
 
 // // modules
 transform('modules/index.amd.js', '@babel/plugin-transform-modules-amd');
