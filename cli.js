@@ -62,11 +62,24 @@ const transform = function (file, plugin, force = false) {
 // // transform-object-assign
 // transform('index.6.js', '@babel/plugin-transform-object-assign');
 
+// plugin-transform-object-super
+transform('index.7.js', '@babel/plugin-transform-object-super');
+
 // // modules
-// transform('modules/index.amd.js', '@babel/plugin-transform-modules-amd');
-// transform('modules/index.commonjs.js', '@babel/plugin-transform-modules-commonjs');
-// transform('modules/index.systemjs.js', '@babel/plugin-transform-modules-systemjs');
-// transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd');
+transform('modules/index.amd.js', '@babel/plugin-transform-modules-amd');
+transform('modules/index.commonjs.js', '@babel/plugin-transform-modules-commonjs');
+transform('modules/index.systemjs.js', '@babel/plugin-transform-modules-systemjs');
+// transform('modules/index.umd.js', '@babel/plugin-transform-modules-umd', true);
+// transform('modules/index.umd.1.js', [
+//     [
+//         '@babel/plugin-transform-modules-umd',
+//         {
+//             "globals": {
+//                 "foo": "Foo"
+//             }
+//         }
+//     ]
+// ], true);
 
 // // react
 // transform('react/index.js', '@babel/plugin-transform-react-jsx');
