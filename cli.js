@@ -34,7 +34,10 @@ const transform = function (file, plugin, force = false) {
 
 
 // class
-// transform('index.1.js', '@babel/plugin-transform-classes');
+transform('index.1.js', [
+    '@babel/plugin-transform-classes',
+    '@babel/plugin-transform-runtime',
+]);
 
 // // destructuring
 // transform('index.2.js', '@babel/plugin-transform-destructuring');
@@ -43,7 +46,7 @@ const transform = function (file, plugin, force = false) {
 transform('index.3.js', '@babel/plugin-transform-instanceof');
 
 // // async-to-generator
-// transform('index.4.js', '@babel/plugin-transform-async-to-generator');
+transform('index.4.js', '@babel/plugin-transform-async-to-generator');
 
 // transform-runtime
 // transform('index.5.js', [
@@ -66,6 +69,14 @@ transform('index.3.js', '@babel/plugin-transform-instanceof');
 transform('index.7.js', '@babel/plugin-transform-object-super');
 
 transform('index.8.js', '@babel/plugin-transform-for-of');
+
+transform('index.9.js', '@babel/plugin-proposal-async-generator-functions');
+transform('index.10.js', '@babel/plugin-proposal-async-generator-functions');
+transform('index.11.js', [
+    '@babel/plugin-proposal-async-generator-functions',
+    '@babel/plugin-transform-regenerator',
+    '@babel/plugin-transform-runtime'
+]);
 
 // // modules
 transform('modules/index.amd.js', '@babel/plugin-transform-modules-amd');
@@ -107,20 +118,20 @@ transform('modules/index.systemjs.js', '@babel/plugin-transform-modules-systemjs
 // ], true);
 
 // // runtime
-// transform('runtime.js', [
-//     '@babel/plugin-transform-regenerator',
-//     [
-//         '@babel/plugin-transform-runtime',
-//         {
-//             "absoluteRuntime": false,
-//             "corejs": false,
-//             "helpers": true,
-//             "regenerator": true,
-//             "useESModules": false,
-//             // "version": "7.0.0-beta.0"
-//         }
-//     ]
-// ], true);
+transform('runtime.js', [
+    '@babel/plugin-transform-regenerator',
+    [
+        '@babel/plugin-transform-runtime',
+        // {
+        //     "absoluteRuntime": false,
+        //     "corejs": 2,
+        //     "helpers": true,
+        //     "regenerator": true,
+        //     "useESModules": false,
+        // }
+    ],
+    '@babel/plugin-transform-modules-commonjs'
+], true);
 
 // // typescript
 // transform('typescript.js', '@babel/plugin-transform-typescript');
