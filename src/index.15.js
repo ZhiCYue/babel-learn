@@ -1,0 +1,1 @@
+<If condition={condition()}>Hello World!</If>
